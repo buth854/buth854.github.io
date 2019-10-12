@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.dropdown .list .tile .tile-icon {
+    min-width: 45px;
+    width: 45px;
+    padding: 0;
+}
+
+.list .tile .tile-icon:first-child {
+    text-align: left;
+}
+.list .tile .tile-content>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.tile-icon>img {
+    width:45px;
+    height:45px;
+}
