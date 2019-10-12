@@ -12,13 +12,10 @@
         <div class="headerbar">
             <div class="headerbar-left">
                 <ul class="header-nav">
-                    <li class="header-nav-brand">header-nav-brand</li>
-                    <li class="hidden-xs">hidden-xs</li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="btn btn-flat btn-default" data-toggle="dropdown" aria-expanded="false">
-                            快速选择职业
-                            <b class="caret"></b>
-                        </a>
+                    <li class="header-nav-brand"><img src="img/logo_xsx.png" ></li>
+                    <li class="hidden-xs"><a href="#" class="btn btn-flat btn-default" ng-click="checkUpdate(true)">更新说明</a></li>
+                    <li class="dropdown hidden-xs">
+                        <a href="javascript:void(0);" name="dropdown1" class="btn btn-flat btn-default" aria-expanded="false">快速选择职业 <b class="caret"></b></a>
                         <ul class="dropdown-menu animation-expand multi-column columns-3">
                             <div class="col-xs-4 dropdown-column">
                                 <ul class="multi-column-dropdown list">
@@ -55,5 +52,19 @@
         <div id="content"></div>
         <div id="menubar"></div>
     </div>
+    <script>
+            var but=document.getElementsByName("dropdown1");
+            var div=document.getElementsByClassName("dropdown-menu");
+            var temp=1; //0为显示
+            but[0].onclick=function(){
+              if(temp==0){ //本来是显示的，所以就隐藏咯
+                div[0].style="display:none";
+                temp=1; //隐藏了就把状态改变了
+              }else{
+                div[0].style="display:block";
+                temp=0;
+              }
+            }
+    </script>
 </body>
 </html>
